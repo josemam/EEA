@@ -17,5 +17,5 @@ int main() {
 		ta = tb; tb = tc;
 	} while (b != 0);
 	
-	std::cout << "MCD = " << a << " = " << sa << "x" << orig_a << " + " << ta << "x" << orig_b << "\n";
+	std::cout << "GCD = " << a << " = " << sa << "x" << orig_a << " + " << ta << "x" << orig_b << "\n";
 }
