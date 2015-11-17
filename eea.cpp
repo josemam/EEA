@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main() {
-	long long int a, b;
+	long long a, b;
 	std::cin >> a >> b;
 	
-	long long int orig_a = a, orig_b = b;
-	long long int q, r, sa = 1, sb = 0, ta = 0, tb = 1, sc, tc;
+	long long orig_a = a, orig_b = b;
+	long long q, r, sa = 1, sb = 0, ta = 0, tb = 1, sc, tc;
 	
 	do {
 		q = a/b;
