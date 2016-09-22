@@ -5,7 +5,7 @@ I needed to perform this algorithm for _rather big_ numbers and I did not find a
 
 The [Extended Euclidean Algorithm] (https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm) returns, for two integers `x` and `y`, the greatest common divisor `gcd(x,y)` and two integers `a` and `b` so that `gcd(x,y) = ax+by`.
 
-I wrote three different examples. `eea.cpp` is a C++ implementation which uses 64 bit integers. `eea.hs` is a Haskell snippet which allows the user to handle arbitrarily _large_ numbers. `eea.mac` is a Maxima package which can be used to run the algorithm with arbitrarily _large_ input numbers, too.
+I wrote three different examples. [`eea.cpp`] (eea.cpp) is a C++ implementation which uses 64 bit integers. [`eea.hs`] (eea.hs) is a Haskell snippet which allows the user to handle arbitrarily _large_ numbers. [`eea.mac`] (eea.mac) is a Maxima package which can be used to run the algorithm with arbitrarily _large_ input numbers, too.
 
 __How to use the `.cpp` one__: once you have downloaded and compiled the source code by running `g++ -o [any name for your executable file] eea.cpp`, run the executable and type the two integers. The output is pretty self-explanatory.
 
