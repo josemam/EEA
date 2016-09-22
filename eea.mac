@@ -1,0 +1,30 @@
+
+/********************************************
+*                                           *
+*                  eea.mac                  *
+*  Extended Euclidean Algorithm for Maxima  *
+*                                           *
+********************************************/
+
+eea(a,b):=block(
+    [q,r,s,t],
+    if b=0 then return([a,1,0]) else (
+        [q,r]:divide(a,b),
+        [r,s,t]:eea(b,r),
+        return([r,t,s-q*t])
+    )
+)$
+
+eea_table(a,b):=block(
+    [q,r,tab,s,t,l],
+    tab:[["",a,1,0],["",b,0,1]],l:2,
+    [q,r]:divide(tab[1][2],tab[2][2]),
+    unless r = 0 do (
+        s:tab[l-1][3]-q*tab[l][3],
+        t:tab[l-1][4]-q*tab[l][4],
+        tab:append(tab, [[q,r,s,t]]),
+        l:l+1,
+        [q,r]:divide(tab[l-1][2],tab[l][2])
+    ),
+    apply(matrix, tab)
+)$
